@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+    <style>
+        @media only screen and (min-width: 768px){
+            .parent:hover .child {
+                opacity:1;
+                height:auto;
+                overflow:none;
+                transform: translateY(0);
+            }
+            .child {
+                opacity:0;
+                height:0;
+                overflow:hidden;
+                transform: translateY(-10%);
+            }
+        }
+
+        @font-face {
+            font-family: 'segularOne';
+            src: url('./assets/fonts/SecularOne.ttf');
+        }
+
+        .font-secularOne {
+            font-family: 'segularOne';
+            /* Autres styles CSS peuvent être ajoutés ici. */
+        }
+
+        @font-face {
+            font-family: 'inter';
+            src: url('./assets/fonts/Amita-Bold.ttf');
+        }
+
+        .font-inter {
+            font-family: 'inter';
+            /* Autres styles CSS peuvent être ajoutés ici. */
+        }
+
+        @layer utilities {
+            .text-fill-transparent {
+                -webkit-text-fill: transparent;
+            }
+
+            .text-stroke {
+                -webkit-text-stroke: 3px #fff;
+            }
+        }
+
+        .clip-hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            border-radius: 10% 10% 0 0 / 50% 50% 0 0;
+        }
+                
+    </style>
+</head>
+<body>
+  <div class="min-h-screen px-12 bg-gradient-to-b from-black to-green-950 text-white ">
+
+    
+        <nav class="flex border-0 bg-transparent items-center relative text-white">
+            <div class="text-lg flex items-center md:py-6 py-6">
+              <img src="./assets/logo.png" alt="" srcset="" class="w-[40px]">
+              <h2 class="pl-3 text-2xl font-inter">Save Earth</h2>
+            </div>
+            <ul class="md:px-2 ml-auto md:flex md:space-x-2 absolute md:relative top-full left-0 right-0 font-bold">
+                <li>
+                    <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
+                        <span>Article</span>
+                    </a>
+                </li>
+                <li class="relative parent">
+                    <a href="#" class="flex justify-between md:inline-flex p-4 items-center hover:bg-gray-50 space-x-2">
+                        <span>For Business</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex md:inline-flex p-4 items-center hover:bg-gray-50">
+                        <span>Showcase</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="ml-auto md:hidden text-gray-500 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+            </div>
+        </nav>
+        <section>
+            <div class="relative h-[250px] flex justify-center text-center">
+                <div class="absolute right-16 top-[0px] w-fit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="650" viewBox="0 0 601 602" fill="none">
+                        <path d="M0.985352 40C0.985352 17.9086 18.894 0 40.9854 0H369.625C382.417 0 394.439 6.11899 401.966 16.4626L593.256 279.305C603.522 293.411 603.461 312.544 593.106 326.585L401.976 585.742C394.436 595.966 382.487 602 369.784 602H40.9854C18.894 602 0.985352 584.091 0.985352 562V40Z" fill="white" fill-opacity="0.1"/>
+                    </svg>
+                </div>
+                <div class="text-[150pt] mt-6 text-white font-secularOne absolute">
+                    <h1>Mother Earth</h1>
+                </div>
+                <div class="absolute blur-lg ml-[-20px]">
+                    <img src="./assets/image_01.png" alt="" srcset="">
+                </div>
+                <div class="absolute text-center">
+                    <img src="./assets/image_01.png" width="100%" alt="" srcset="" class="index-0">
+                </div>
+                <div class="text-[150pt] mt-6 text-transparent font-secularOne absolute text-fill-transparent text-stroke">
+                    <h1>Mother Earth</h1>
+                </div>
+            </div>
+        </section>
+        <section class="h-[160px] flex flex-col w-fit justify-between mt-6">
+            <div class="text-3xl">
+                <p>We help you live</p>
+                <p>carbon neutral</p>
+            </div>
+            <div class="btn">
+                <button class="bg-lime-500 px-4 mt-4 py-3 text-center text-2xl font-semibold inline-block text-white cursor-pointer">
+                    Calculate Impact
+                  </button>
+            </div>
+        </section>
+        <section class="h-[460px] flex justify-between items-end">
+
+            <div class="sticky max-w-xl px-8 py-12 border rounded-tr-[60px] shadow-lg h-fit">
+                <h2 class="space-y-1 text-2xl font-bold leading-none">
+                    <span class="block">Understand Emission</span>
+                </h2>
+                <p class="font-normal">
+                    Use our calculation powered <br> by data from world bank to <br> estimate your emission
+                </p>
+            </div>
+
+            <div class="sticky max-w-xl px-8 py-12 border rounded-tl-[60px] shadow-lg h-fit">
+                <h2 class="space-y-1 text-2xl font-bold leading-none">
+                    <span class="block">Support Climate Projects</span>
+                </h2>
+                <p class="font-normal">
+                    Sign up and and fund high <br> impact carbon offsetting & <br> plastic recycling initiatives.
+                </p>
+            </div>
+
+        </section>
+    </div>
+    
+</body>
+</html>
