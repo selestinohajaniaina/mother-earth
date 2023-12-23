@@ -22,4 +22,4 @@
 
 ## integration
 
-[https://selestinohajaniaina.github.com/mother-earth](https://selestinohajaniaina.github.com/mother-earth)
+[https://selestinohajaniaina.github.io/mother-earth](https://selestinohajaniaina.github.io/mother-earth)
